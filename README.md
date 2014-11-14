@@ -1,3 +1,3 @@
-Tesla
+PYMB
 =====
-A static HTML/CSS prototype based on Bootstrap. 
+A prototype for pymb. 
