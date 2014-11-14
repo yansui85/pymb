@@ -1,0 +1,178 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@import "../bower_components/bootstrap/less/theme.less";
+@top-height: 150px;
+@global-width: 974px;
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	background-color: #eee;
+	a {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	
+	.fa-star {
+		color: #f0e716;
+	}
+
+	#fixed-top {
+		position: fixed;
+		width: 100%;
+		height: @top-height;
+		.center {
+			width: @global-width;
+			margin-left: auto;
+			margin-right: auto;
+			z-index: 0;
+			
+			.header {
+				height: 70px;
+				//position: fixed;
+				background-color: #eee;
+				h1 {
+					font-size: 20px;
+					margin-top: 30px;
+				}
+				.toggle {
+					margin-top: 35px;
+					.fa-star {
+						text-shadow: 0px 0px 1px black;
+					}
+				}
+			}
+
+			.pymb-list {
+				.nav {
+					border: none;
+					li {
+						margin: 0;
+						z-index: 1;
+						padding-top: 7px;
+						background-color: #eee;	
+						a{
+							padding: 0;
+							margin: 0;
+							border: none;
+							img {
+								width: (@global-width - 78) / 14;
+								height: (@global-width - 78) / 14;
+								-webkit-transition: width 0.2s, height 0.2s, -webkit-transform 0.2s;
+    							transition: width 0.2s, height 0.2s, transform 0.2s;
+								opacity: 0.75;
+								-webkit-filter: grayscale(0.8);
+								filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+								&:hover {
+									opacity: 1;
+									-webkit-filter: none;
+									filter: none;
+								}
+							}
+						}
+						&.active {
+							z-index: 10;
+							padding: 0;
+							a img {
+								width: 78px;
+								height: 78px;
+								box-shadow: 0 1px 20px 5px rgba(0,0,0,0.5);
+								opacity: 1;
+								-webkit-filter: none;
+								filter: none;								
+							}					
+						}
+					}
+				}	
+			}
+		}		
+	}
+
+	#profile-bg {	
+		height: 400px;
+		width: 100%;
+		position: fixed;	
+		z-index: -1;
+		margin: @top-height - 9px 0 0;
+		#profile-bg-img {
+			background: url('../images/texture_default_blue.jpg') no-repeat;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;		
+			width: 100%;
+			height: 100%; 
+			background-position: 50% 0px;
+			min-width: @global-width;
+			position: absolute;
+		}
+	}
+
+	#hero-star {
+		position: fixed;
+		bottom: 50px;
+		right: 50px;
+		//background-color: rgba(255,255,255,0.2);
+		background-color: #00A0DC;
+		height: 80px;
+		width: 80px;
+		//border: 2px solid rgba(255,255,255,0.2);
+		border-radius: 40px;
+		border-right: none;			
+		z-index: 1000;
+		box-shadow: -2px 2px 30px rgba(0,0,0,0.4);
+		padding: 10px 21px;
+		color: rgba(255,255,255,0.7);
+		i {
+			font-size: 40px;
+			&.fa-star {
+				text-shadow: 0px 0px 2px white;
+			}
+		}
+		p {
+			// margin-top: -5px;
+			margin-bottom: 0;
+		}
+		&:hover {
+			box-shadow: -2px 2px 40px rgba(0,0,0,0.7);
+			cursor: pointer;
+			color: rgba(255,255,255,0.9);
+		}		
+	}	
+	#profile {
+		width: @global-width;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: @top-height + 80px; 
+		z-index: 0;		
+		.tab-content {
+			background-color: rgba(255,255,255,1);
+			height: 3000px;	
+			border: 1px solid #ddd;
+			box-sizing: border-box;
+		//	box-shadow: 0 -1px 20px rgba(0,0,0,0.2);	
+		}		
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
