@@ -1,8 +1,18 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
 @import "../bower_components/bootstrap/less/theme.less";
-@top-height: 150px;
+@top-height: 141px;
 @global-width: 974px;
-@profile-bg-height: 400px;
+@profile-bg-height: 320px;
+@profile-header-height: 240px;
+@text-gray: #aaa;
+@font-face {
+	font-family: 'LinkedIn-Glyphs-2.0.2';
+  	src: url('LinkedIn-Glyphs-16px.eot');
+  	src: url('LinkedIn-Glyphs-16px.eot?#iefix') format('embedded-opentype'), 
+		url('LinkedIn-Glyphs-16px.woff') format('woff'), 
+		url('LinkedIn-Glyphs-16px.ttf')  format('truetype'), 
+		url('LinkedIn-Glyphs-16px.svg#svgFontName') format('svg'); 
+}
 body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-weight: 300;
@@ -17,14 +27,21 @@ body {
 		color: #f0e716;
 	}
 
+	.center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	#fixed-top {
 		position: fixed;
 		width: 100%;
 		height: @top-height;
+		background-color: #eee;
+		box-shadow: 0 0 30px rgba(0,0,0,0.5);
+
 		.center {
+			height: @top-height;
 			width: @global-width;
-			margin-left: auto;
-			margin-right: auto;
 			z-index: 0;
 			
 			.header {
@@ -58,8 +75,8 @@ body {
 							img {
 								width: (@global-width - 78) / 14;
 								height: (@global-width - 78) / 14;
-								-webkit-transition: width 0.2s, height 0.2s, -webkit-transform 0.2s;
-    							transition: width 0.2s, height 0.2s, transform 0.2s;
+								-webkit-transition: width 0.1s, height 0.1s, -webkit-transform 0.1s;
+    							transition: width 0.1s, height 0.1s, transform 0.1s;
 								opacity: 0.75;
 								-webkit-filter: grayscale(0.8);
 								filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
@@ -93,7 +110,7 @@ body {
 		width: 100%;
 		position: fixed;	
 		z-index: -1;
-		margin: @top-height - 9px 0 0;
+		margin: @top-height 0 0;
 		#profile-bg-img {
 			background: url('../images/texture_default_blue.jpg') no-repeat;
 			-webkit-background-size: cover;
@@ -107,98 +124,319 @@ body {
 			position: absolute;
 		}
 	}
+//material design fab style
+	// #hero-star {
+	// 	position: fixed;
+	// 	top: @top-height + @profile-bg-height - 7px - 45px;
+	// 	right: 30px;
+	// 	//background-color: rgba(255,255,255,1);
+	// 	background-color: #E68523;
+	// 	height: 80px;
+	// 	width: 80px;
+	// 	//border: 2px solid rgba(255,255,255,0.2);
+	// 	border-radius: 50%;
+	// 	border-right: none;			
+	// 	z-index: 1000;
+	// 	box-shadow: -2px 5px 10px rgba(0,0,0,0.2);
+	// 	padding: 10px 21px;
+	// 	color: rgba(255,255,255,0.85);
+	// 	i {
+	// 		font-size: 40px;
+	// 		&.fa-star {
+	// 			text-shadow: 0px 0px 2px white;
+	// 		}
+	// 	}
+	// 	p {
+	// 		// margin-top: -5px;
+	// 		margin-bottom: 0;
+	// 	}
+	// 	&:hover {
+	// 		box-shadow: -2px 5px 20px rgba(0,0,0,0.5);
+	// 		cursor: pointer;
+	// 		color: rgba(255,255,255,1);
+	// 	}		
+	// }	
 
+//centered hero star button
 	#hero-star {
 		position: fixed;
-		top: @top-height + @profile-bg-height - 7px - 45px;
-		right: 30px;
-		//background-color: rgba(255,255,255,1);
-		background-color: #E68523;
-		height: 80px;
-		width: 80px;
-		//border: 2px solid rgba(255,255,255,0.2);
-		border-radius: 50%;
-		border-right: none;			
-		z-index: 1000;
-		box-shadow: -2px 5px 10px rgba(0,0,0,0.2);
-		padding: 10px 21px;
-		color: rgba(255,255,255,0.85);
-		i {
-			font-size: 40px;
-			&.fa-star {
-				text-shadow: 0px 0px 2px white;
+		width: 100%;
+		top: @top-height + 30px;
+		.center {
+			background-color: rgba(0,0,0,0.5);
+			height: 60px;
+			width: 60px;
+			border-radius: 50%;
+			border-right: none;			
+			z-index: 1000;
+			box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+			padding: 10px;
+			color: rgba(255,255,255,0.8);
+			i {
+				font-size: 28px;
+				&.fa-star {
+					text-shadow: 0px 0px 1px white;
+				}
 			}
-		}
-		p {
-			// margin-top: -5px;
-			margin-bottom: 0;
-		}
-		&:hover {
-			box-shadow: -2px 5px 20px rgba(0,0,0,0.5);
-			cursor: pointer;
-			color: rgba(255,255,255,1);
+			p {
+				margin-top: -3px;
+				font-size: 0.95em;
+				margin-bottom: 0;
+			}
+			&:hover {
+				box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+				cursor: pointer;
+				color: white;
+			}			
 		}		
-	}	
+	}
 
 	#profile {
 		width: @global-width;
 		margin-left: auto;
 		margin-right: auto;
-		padding-top: @top-height + 80px; 
+		padding-top: @top-height + 120px; 
+		padding-bottom: 50px;
 		z-index: 0;		
 		.tab-content {
-			background-color: rgba(255,255,255,1);
-			height: 3000px;	
-			border: 1px solid #ddd;
 			box-sizing: border-box;
-		//	box-shadow: 0 -1px 20px rgba(0,0,0,0.2);	
+			.tab-pane {
+				.card {
+					border-bottom: 1px solid #999;
+					box-sizing: content-box;
+					margin-bottom: 10px;
+					vertical-align: baseline;
+					box-shadow: 0 1px 20px rgba(0,0,0,0.1);
+
+				}
+
+				.profile-header {
+					background-color: transparent;
+					height: @profile-header-height;					  
+					  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+					  background-image: -webkit-linear-gradient(bottom, white, white 35%, rgba(255,255,255,0.85));
+
+					  /* Firefox 3.6 - 15 */
+					  background-image: -moz-linear-gradient(bottom, white, white 35%, rgba(255,255,255,0.85));
+
+					  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+					  background-image: linear-gradient(to top, white, white 35%, rgba(255,255,255,0.85));
+				
+					.profile-picture {
+						height: @profile-header-height;
+						width: @profile-header-height;
+						background: none;
+						margin: 0;
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+					.profile-overview {
+						word-wrap: break-word;
+						padding: 25px 40px;
+						height: @profile-header-height;
+						width: @global-width - @profile-header-height - 2; 
+						.masthead {
+							margin-bottom: 30px;
+							h3, h4 {
+								margin-top: 0;
+							}
+							.more-info {
+								div {
+									display: inline-block;
+									&.region {
+										padding-left: 0;
+										padding-right: 15px;
+										margin-right: 10px;
+										border-right: 1px solid #333;
+									}	
+								}
+							}					
+						}
+						table {
+							th {
+								color: @text-gray;
+								padding-right: 20px;
+								font-weight: normal;
+							}
+						}
+
+					}
+
+				}
+
+				.profile-body {
+					background-color: white;
+					padding: 20px;
+					h2 {
+						margin-top: -20px;
+						margin-bottom: 0px;
+						margin-left: -20px;
+						margin-right: 0px;
+						padding-top: 9px;
+						padding-bottom: 7px;
+						padding-left: 20px;
+						padding-right: 20px;
+						background-color: #333;
+						color: #fff;
+						font-size: 13px;
+						line-height: 17px;
+						font-weight: bold;
+						padding: 7.5px 20px;
+						display: -moz-inline-stack;
+						display: inline-block;
+						zoom: 1;
+						vertical-align: top;
+						word-wrap: normal;						
+					}
+					.background-section {
+						font-size: 13px;
+						line-height: 17px;
+						color: #333;
+						font-weight: normal;
+						border-bottom: 1px solid #e8e8e8;
+						padding-bottom: 15px;
+						h3{
+							font-size: 20px;
+							margin-bottom: 20px;
+							line-height: 50px;
+							&:before {
+								float: left;
+								width: 50px;
+								font-family: "LinkedIn-Glyphs-2.0.2";
+								font-weight: normal;
+								font-style: normal;
+								text-decoration: inherit;
+								speak: none;
+								font-size: 32px;
+								color: inherit;
+							}
+						}
+						h4{
+							font-size: 18px;
+							font-weight: bold;
+							margin-bottom: 5px;
+						}
+						h5{
+							font-size: 18px;
+							margin-top: 0;
+							margin-bottom: 5px;
+
+						}
+						.description {
+							font-size: 14px;
+						}
+						.position {
+							margin-bottom: 30px;
+							.experience-logo {
+								float: right;
+								width: 100px;
+								height: 60px;
+								margin-top: -2px;
+								margin-bottom: 0;
+								text-align: center;
+								img {
+									max-height: 60px;
+									max-width: 100px;
+								}
+							}
+							.experience-date-locale {
+								margin-bottom: 20px;
+								color: @text-gray;
+								font-size: 14px;
+								.locality {
+									&:before {
+										content: "|";
+										padding-left: 6px;
+										padding-right: 6px;
+									}
+								}
+							}							
+						}
+
+					}
+					//linkedin glyphs
+					#background-summary-container {
+						h3:before {
+							content: "\e039";
+						}
+					}
+					#background-experience-container {
+						h3:before {
+							content: "\e03a";
+						}
+					}
+					#background-education-container {
+						h3:before {
+							content: "\e03b";
+						}
+					}
+					#background-languages-container {
+						h3:before {
+							content: "\e051";
+						}
+					}
+					#background-skills-container {
+						h3:before {
+							content: "\e03c";
+						}
+					}					
+				}
+			}
+
+		}
+
+		#save-hint {
+			padding: 20px 0;
+			text-align: center;
 		}		
 	}
 
 
 }
 
-@media screen and (max-width: 1230px) {
-	body{
-		#hero-star {
-			right: 2%;
-			top: auto;
-			bottom: 30px;
-		}		
-	}
-}
+// @media screen and (max-width: 1230px) {
+// 	body{
+// 		#hero-star {
+// 			right: 2%;
+// 			top: auto;
+// 			bottom: 30px;
+// 		}		
+// 	}
+// }
 
-@media screen and (min-width: 1300px) {
-	body{
-		#hero-star {
-			right: 5%;
-		}		
-	}
-}
+// @media screen and (min-width: 1300px) {
+// 	body{
+// 		#hero-star {
+// 			right: 5%;
+// 		}		
+// 	}
+// }
 
-@media screen and (min-width: 1600px) {
-	body{
-		#hero-star {
-			right: 10%;
-		}		
-	}
-}
+// @media screen and (min-width: 1600px) {
+// 	body{
+// 		#hero-star {
+// 			right: 10%;
+// 		}		
+// 	}
+// }
 
-@media screen and (min-width: 1800px) {
-	body{
-		#hero-star {
-			right: 15%;
-		}		
-	}
-}
+// @media screen and (min-width: 1800px) {
+// 	body{
+// 		#hero-star {
+// 			right: 15%;
+// 		}		
+// 	}
+// }
 
-@media screen and (min-width: 2100px) {
-	body{
-		#hero-star {
-			right: 20%;
-		}		
-	}
-}
+// @media screen and (min-width: 2100px) {
+// 	body{
+// 		#hero-star {
+// 			right: 20%;
+// 		}		
+// 	}
+// }
 
 
 
