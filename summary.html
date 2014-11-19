@@ -28,7 +28,7 @@
           <h1 class="pull-left">Hi Dacheng, inspired by your career, we found these <strong>People You Might Become</strong></h1>
           <div class="toggle pull-right">
             <i class="fa fa-star"></i>
-            <a id="save-count" href="summary.html"></a>
+            <a>3 saved</a>
           </div>
         </div>
         <div class="pymb-list">
@@ -64,9 +64,9 @@
      <div class="tab-content">
         <div role="tabpanel" class="tab-pane fade in active" id="profile_1">
           <div class="hero-star" align="center">
-            <button class="center" onclick="toggleSave(this, 0)">
-              <i class="fa fa-star-o"></i>
-              <p>Save</p>
+            <button class="center" ng-click="saved1 = !saved1">
+              <i class="fa" ng-class="{'fa-star': saved1, 'fa-star-o': !saved1}"></i>
+              <p>{{saved1 && 'Saved' || 'Save'}}</p>
             </button>
           </div>   
           <div class="profile-header card">
@@ -189,12 +189,12 @@
           </div>
         </div>
         <div role="tabpanel" class="tab-pane fade" id="profile_2">
-          <div class="hero-star" align="center">
-            <button class="center" onclick="toggleSave(this, 1)">
-              <i class="fa fa-star-o"></i>
-              <p>Save</p>
+         <div class="hero-star" align="center">
+            <button class="center" ng-click="saved2 = !saved2">
+              <i class="fa" ng-class="{'fa-star': saved2, 'fa-star-o': !saved2}"></i>
+              <p>{{saved2 && 'Saved' || 'Save'}}</p>
             </button>
-          </div>    
+          </div>   
           <div class="profile-header card">
               <div class="profile-picture pull-left"><img src="images/placeholder2.jpg"></img></div>
               <div class="profile-overview pull-right">
