@@ -1,445 +1,112 @@
-@import "../bower_components/bootstrap/less/bootstrap.less";
-@import "../bower_components/bootstrap/less/theme.less";
-@top-height: 142px;
-@global-width: 974px;
-@profile-bg-height: 320px;
-@profile-header-height: 240px;
-@text-gray: #aaa;
-@font-face {
-	font-family: 'LinkedIn-Glyphs-2.0.2';
-  	src: url('LinkedIn-Glyphs-16px.eot');
-  	src: url('LinkedIn-Glyphs-16px.eot?#iefix') format('embedded-opentype'), 
-		url('LinkedIn-Glyphs-16px.woff') format('woff'), 
-		url('LinkedIn-Glyphs-16px.ttf')  format('truetype'), 
-		url('LinkedIn-Glyphs-16px.svg#svgFontName') format('svg'); 
-}
 body {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	font-weight: 300;
-	background-color: #eee;
-	a {
-		&:hover {
-			cursor: pointer;
+	.section {
+		padding: 30px 0;
+		h1 {
+			margin-top: 0;
+		}
+	}
+	#congrats {
+		height: 80px;
+		width: 100%;
+		background: url('../images/texture_default_blue.jpg') no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;		
+		background-position: 50% 0px;
+		min-width: @global-width;
+		.text-light {
+			color: rgba(255,255,255,0.95);
+			a {
+				color: white !important;
+			}
+		}
+		.fa-star {
+			margin-right: 10px;	
+		}
+		.fa-ellipsis-h{
+			margin-right: 3px;
+		}
+		.pull-right {
+			margin-top: 2px;
 		}
 	}
 	
-	.fa-star {
-		color: #f0e716;
-	}
+	#pymb-cards {
+		@pymb-height: @profile-header-height - 40px;
+		@pymb-width: @global-width / 2 - 10px;
+		@pic-size: 120px;
+		font-size: 0.9em;
+		.pymb-header {
+			background-color: transparent;
+			height: @pymb-height; 
+			margin: 0;
+			/* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+			background-image: -webkit-linear-gradient(bottom, white, white 35%, rgba(255,255,255,0.85));
+			/* Firefox 3.6 - 15 */
+			background-image: -moz-linear-gradient(bottom, white, white 35%, rgba(255,255,255,0.85));
+			/* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+			background-image: linear-gradient(to top, white, white 35%, rgba(255,255,255,0.85));
 
-	.center {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	
-	button:focus {
-		outline: none;
-	}
-
-	#fixed-top {
-		position: fixed;
-		width: 100%;
-		height: @top-height;
-		background-color: #eee;
-		box-shadow: 0 1px 50px rgba(10,10,10,0.8);
-		border-bottom: 1px solid #333;
-		z-index: 100;
-		.center {
-			height: @top-height;
-			width: @global-width;
-			z-index: 0;
-			
-			.header {
-				height: 70px;
-				//position: fixed;
-				background-color: #eee;
-				h1 {
-					font-size: 20px;
-					margin-top: 30px;
-				}
-				.toggle {
-					margin-top: 35px;
-					.fa-star {
-						text-shadow: 0px 0px 1px black;
-					}
+			.pymb-picture {
+				height: @pic-size;
+				width: @pic-size;
+				background: none;
+				margin: 20px 0;
+				img {
+					width: 100%;
+					height: 100%;
+					border: 1px solid #eee;
 				}
 			}
-
-			.pymb-list {
-				.nav {
-					border: none;
-					li {
-						margin: 0;
-						z-index: 1;
-						padding-top: 7px;
-						background-color: #eee;	
-						a{
-							padding: 0;
-							margin: 0;
-							border: none;
-							img {
-								width: (@global-width - 78) / 14;
-								height: (@global-width - 78) / 14;
-								-webkit-transition: width 0.1s, height 0.1s, -webkit-transform 0.1s;
-    							transition: width 0.1s, height 0.1s, transform 0.1s;
-								opacity: 0.75;
-								-webkit-filter: grayscale(0.8);
-								filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-								&:hover {
-									opacity: 1;
-									-webkit-filter: none;
-									filter: none;
-								}
-							}
-						}
-						&.active {
-							z-index: 10;
-							padding: 0;
-							a img {
-								width: 78px;
-								height: 78px;
-								box-shadow: 0 1px 20px 5px rgba(0,0,0,0.5);
-								opacity: 1;
-								-webkit-filter: none;
-								filter: none;								
-							}					
-						}
+			.pymb-overview {
+				word-wrap: break-word;
+				padding: 20px;
+				height: @pymb-height;
+				width: @pymb-width - @pic-size; 
+				.masthead {
+					margin-bottom: 20px;
+					h3, h4 {
+						margin-top: 0;
 					}
-				}	
-			}
-		}		
-	}
-
-	#profile-bg {	
-		height: @profile-bg-height;
-		width: 100%;
-		position: fixed;	
-		z-index: -1;
-		margin: @top-height 0 0;
-		#profile-bg-img {
-			background: url('../images/texture_default_blue.jpg') no-repeat;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;		
-			width: 100%;
-			height: 100%; 
-			background-position: 50% 0px;
-			min-width: @global-width;
-			position: absolute;
-		}
-	}
-
-	#profile {
-		width: @global-width;
-		margin-left: auto;
-		margin-right: auto;
-		padding-top: @top-height + 120px; 
-		padding-bottom: 30px;
-		z-index: 0;		
-		.tab-content {
-			box-sizing: border-box;
-			.tab-pane {
-
-			//centered hero star button
-				.hero-star {
-					position: fixed;
-					width: @global-width;
-					top: @top-height + 30px;
-					button.center {
-						background-color: rgba(0,0,0,0.65);
-						height: 60px;
-						width: 60px;
-						border-radius: 50%;
-						z-index: 1000;
-						box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-						padding: 10px;
-						color: rgba(255,255,255,0.8);
-						border: none;
-						
-						i {
-							font-size: 28px;
-							&.fa-star {
-								text-shadow: 0px 0px 1px white;
-							}
-						}
-						p {
-							margin-top: -3px;
-							font-size: 0.9em;
-							margin-bottom: 0;
-						}
-						&:hover {
-							box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-							cursor: pointer;
-							color: white;
-						}			
-					}		
-				}
-
-				.card {
-					border-bottom: 1px solid #999;
-					box-sizing: content-box;
-					margin-bottom: 10px;
-					vertical-align: baseline;
-					box-shadow: 0 1px 20px rgba(0,0,0,0.1);
-				}
-
-				.profile-header {
-					background-color: transparent;
-					height: @profile-header-height;					  
-					  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
-					  background-image: -webkit-linear-gradient(bottom, white, white 35%, rgba(255,255,255,0.85));
-
-					  /* Firefox 3.6 - 15 */
-					  background-image: -moz-linear-gradient(bottom, white, white 35%, rgba(255,255,255,0.85));
-
-					  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
-					  background-image: linear-gradient(to top, white, white 35%, rgba(255,255,255,0.85));
-				
-					.profile-picture {
-						height: @profile-header-height;
-						width: @profile-header-height;
-						background: none;
-						margin: 0;
-						img {
-							width: 100%;
-							height: 100%;
-						}
-					}
-					.profile-overview {
-						word-wrap: break-word;
-						padding: 25px 40px;
-						height: @profile-header-height;
-						width: @global-width - @profile-header-height - 2; 
-						.masthead {
-							margin-bottom: 30px;
-							h3, h4 {
-								margin-top: 0;
-							}
-							.more-info {
-								div {
-									display: inline-block;
-									&.region {
-										padding-left: 0;
-										padding-right: 15px;
-										margin-right: 10px;
-										border-right: 1px solid #333;
-									}	
-								}
-							}					
-						}
-						table {
-							th {
-								color: @text-gray;
-								padding-right: 20px;
-								font-weight: normal;
-							}
-						}
-
-					}
-
-				}
-
-				.profile-body {
-					background-color: white;
-					padding: 20px;
-					h2 {
-						margin-top: -20px;
-						margin-bottom: 0px;
-						margin-left: -20px;
-						margin-right: 0px;
-						padding-top: 9px;
-						padding-bottom: 7px;
-						padding-left: 20px;
-						padding-right: 20px;
-						background-color: #333;
-						color: #fff;
-						font-size: 13px;
-						line-height: 17px;
-						font-weight: bold;
-						padding: 7.5px 20px;
-						display: -moz-inline-stack;
-						display: inline-block;
-						zoom: 1;
-						vertical-align: top;
-						word-wrap: normal;						
-					}
-					.background-content {
-						padding: 0 10px;
-						.background-section {
-							font-size: 13px;
-							line-height: 17px;
-							color: #333;
-							font-weight: normal;
-							border-bottom: 1px solid #e8e8e8;
-							padding-bottom: 30px;
-							&:last-child {
-								border-bottom: none;
-							}
-							h3{
-								font-size: 20px;
-								margin-bottom: 20px;
-								line-height: 50px;
-								&:before {
-									float: left;
-									width: 50px;
-									font-family: "LinkedIn-Glyphs-2.0.2";
-									font-weight: normal;
-									font-style: normal;
-									text-decoration: inherit;
-									speak: none;
-									font-size: 32px;
-									color: inherit;
-								}
-							}
-							h4{
-								font-size: 18px;
-								font-weight: bold;
-								margin-bottom: 5px;
-							}
-							h5{
-								font-size: 18px;
-								margin-top: 0;
-								margin-bottom: 5px;
-
-							}
-							.description {
-								font-size: 14px;
-							}
-							.position {
-								margin-top: 30px;
-								&.position-latest {
-									margin-top: 0;
-								}
-								.experience-logo {
-									float: right;
-									width: 100px;
-									height: 60px;
-									margin-top: -2px;
-									margin-bottom: 0;
-									text-align: center;
-									img {
-										max-height: 60px;
-										max-width: 100px;
-									}
-								}
-								.experience-date-locale {
-									margin-bottom: 20px;
-									color: @text-gray;
-									font-size: 14px;
-									.locality {
-										&:before {
-											content: "|";
-											padding-left: 6px;
-											padding-right: 6px;
-										}
-									}
-								}							
-							}
-							.language {
-								display: inline-block;
-								margin-right: 50px;
-								&:last-child {
-									margin-right: 0 !important;
-								}
-							}
-							.skill {
-								display: inline-block;
-								margin-right: 5px;
-								margin-bottom: 8px;
-								&:last-child {
-									margin-right: 0 !important;
-								}
-								background-color: #f0f0f0;
-								height: 24px;
-								border-radius: 3px;
-								border-bottom: 1px solid #ddd;
-								padding: 4px 10px;
-							}
-						}						
-					}
-
-					//linkedin glyphs
-					.background-summary-container {
-						h3:before {
-							content: "\e039";
-						}
-					}
-					.background-experience-container {
-						h3:before {
-							content: "\e03a";
-						}
-					}
-					.background-education-container {
-						h3:before {
-							content: "\e03b";
-						}
-					}
-					.background-languages-container {
-						h3:before {
-							content: "\e051";
-						}
-					}
-					.background-skills-container {
-						h3:before {
-							content: "\e03c";
+					.more-info {
+						div {
+							display: inline-block;
+							&.region {
+								padding-left: 0;
+								padding-right: 15px;
+								margin-right: 10px;
+								border-right: 1px solid #333;
+							}	
 						}
 					}					
 				}
+				table {
+					th {
+						color: @text-gray;
+						padding-right: 20px;
+						font-weight: normal;
+					}
+				}
 			}
 		}
-		#save-hint {
-			padding: 20px 0;
-			text-align: center;
-		}		
 	}
 
-
+	#more-info {
+		background-color: white;
+		height: 280px;
+		.info-piece {
+			padding: 10px;
+		}
+		#common-skills {
+			.skill {
+				border: 1px solid #00A0DC;
+				background-color: transparent;
+				color: #00A0DC;
+			}
+		}
+	}
 }
-
-// @media screen and (max-width: 1230px) {
-// 	body{
-// 		#hero-star {
-// 			right: 2%;
-// 			top: auto;
-// 			bottom: 30px;
-// 		}		
-// 	}
-// }
-
-// @media screen and (min-width: 1300px) {
-// 	body{
-// 		#hero-star {
-// 			right: 5%;
-// 		}		
-// 	}
-// }
-
-// @media screen and (min-width: 1600px) {
-// 	body{
-// 		#hero-star {
-// 			right: 10%;
-// 		}		
-// 	}
-// }
-
-// @media screen and (min-width: 1800px) {
-// 	body{
-// 		#hero-star {
-// 			right: 15%;
-// 		}		
-// 	}
-// }
-
-// @media screen and (min-width: 2100px) {
-// 	body{
-// 		#hero-star {
-// 			right: 20%;
-// 		}		
-// 	}
-// }
-
-
 
 
 

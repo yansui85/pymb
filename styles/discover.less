@@ -1,32 +1,4 @@
-@top-height: 142px;
-@global-width: 974px;
-@profile-bg-height: 320px;
-@profile-header-height: 240px;
-@text-gray: #aaa;
-
 body {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	font-weight: 300;
-	background-color: #eee;
-	a {
-		&:hover {
-			cursor: pointer;
-		}
-	}
-	
-	.fa-star {
-		color: #f0e716;
-	}
-
-	.center {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	
-	button:focus {
-		outline: none;
-	}
-
 	#fixed-top {
 		position: fixed;
 		width: 100%;
@@ -37,17 +9,12 @@ body {
 		z-index: 100;
 		.center {
 			height: @top-height;
-			width: @global-width;
 			z-index: 0;
 			
 			.header {
 				height: 70px;
 				//position: fixed;
 				background-color: #eee;
-				h1 {
-					font-size: 20px;
-					margin-top: 30px;
-				}
 				.toggle {
 					margin-top: 35px;
 					.fa-star {
@@ -81,6 +48,16 @@ body {
 									-webkit-filter: none;
 									filter: none;
 								}
+								// &::after {
+								// 	position: absolute;
+								// 	content: '';
+								// }
+							}
+							.fa-star {
+								position: absolute;
+								bottom: 1px;
+								right: 3px;
+								text-shadow: 0px 0px 1px black;								
 							}
 						}
 						&.active {
@@ -123,8 +100,6 @@ body {
 
 	#profile {
 		width: @global-width;
-		margin-left: auto;
-		margin-right: auto;
 		padding-top: @top-height + 120px; 
 		padding-bottom: 30px;
 		z-index: 0;		
@@ -165,14 +140,6 @@ body {
 							color: white;
 						}			
 					}		
-				}
-
-				.card {
-					border-bottom: 1px solid #999;
-					box-sizing: content-box;
-					margin-bottom: 10px;
-					vertical-align: baseline;
-					box-shadow: 0 1px 20px rgba(0,0,0,0.1);
 				}
 
 				.profile-header {
@@ -334,19 +301,6 @@ body {
 									margin-right: 0 !important;
 								}
 							}
-							.skill {
-								display: inline-block;
-								margin-right: 5px;
-								margin-bottom: 8px;
-								&:last-child {
-									margin-right: 0 !important;
-								}
-								background-color: #f0f0f0;
-								height: 24px;
-								border-radius: 3px;
-								border-bottom: 1px solid #ddd;
-								padding: 4px 10px;
-							}
 						}						
 					}
 
@@ -384,8 +338,6 @@ body {
 			text-align: center;
 		}		
 	}
-
-
 }
 
 // @media screen and (max-width: 1230px) {

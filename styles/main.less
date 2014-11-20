@@ -1,7 +1,12 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
 @import "../bower_components/bootstrap/less/theme.less";
-@import "discover.less";
-@import "summary.less";
+
+@top-height: 142px;
+@global-width: 974px;
+@profile-bg-height: 320px;
+@profile-header-height: 240px;
+@text-gray: #aaa;
+@grid-gutter-width: 10px;
 
 @font-face {
 	font-family: 'LinkedIn-Glyphs-2.0.2';
@@ -12,7 +17,64 @@
 		url('../fonts/LinkedIn-Glyphs-16px.svg#svgFontName') format('svg'); 
 }
 
+body{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	background-color: #eee;
+	
+	a {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	
+	.center {
+		margin-left: auto;
+		margin-right: auto;
+		width: @global-width;
+	}	
+	
+	button:focus {
+		outline: none;
+	}
+	
+	.fa-star {
+		color: #f0e716;
+	}
+	
+	h1 {
+		font-size: 20px;
+		margin-top: 30px;
+	}
+	
+	.card {
+		border-bottom: 1px solid #999;
+		box-sizing: content-box;
+		margin-bottom: 10px;
+		vertical-align: baseline;
+		box-shadow: 0 1px 20px rgba(0,0,0,0.1);
+	}	
+	//skill pills
+	.skill {
+		display: inline-block;
+		margin-right: 5px;
+		margin-bottom: 8px;
+		font-size: 13px;
+		line-height: 16px;
+		&:last-child {
+			margin-right: 0 !important;
+		}
+		background-color: #f0f0f0;
+		height: 24px;
+		border-radius: 3px;
+		border-bottom: 1px solid #ddd;
+		padding: 4px 10px;
+	}
+}
 
+
+@import "discover.less";
+@import "summary.less";
 
 
 

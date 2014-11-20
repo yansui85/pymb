@@ -22,56 +22,22 @@
     <![endif]-->
   </head>
   <body>
-    <div id="fixed-top">
-      <div class="center">
-        <div class="header">
-          <h1 class="pull-left">Hi Dacheng, inspired by your career, we found these <strong>People You Might Become</strong></h1>
-          <div class="toggle pull-right">
-            <i class="fa fa-star"></i>
-            <a>3 saved</a>
+
+    <div id="congrats" class="section">
+        <div class="center">
+          <h1 class="pull-left"><span class="fa fa-star"></span><span class="text-light">Congratulations Dacheng! You've found 3 inspiring profiles!</span></h1>
+          <div class="find-more pull-right text-light">
+            <span class="fa fa-lg fa-ellipsis-h"></span>
+            <a href="index.html">Find more</a>
           </div>
         </div>
-        <div class="pymb-list">
-            <!-- Nav tabs -->
-            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs" role="tablist">
-              <li class="active"><a href="#profile_1" aria-controls="profile_1" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_2" aria-controls="profile_2" role="tab" data-toggle="tab"><img src="images/placeholder2.jpg"></img></a></li>
-              <li><a href="#profile_3" aria-controls="profile_3" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_4" aria-controls="profile_4" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_5" aria-controls="profile_5" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_6" aria-controls="profile_6" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_7" aria-controls="profile_7" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_8" aria-controls="profile_8" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_9" aria-controls="profile_9" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_10" aria-controls="profile_10" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_11" aria-controls="profile_11" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_12" aria-controls="profile_12" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_13" aria-controls="profile_13" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_14" aria-controls="profile_14" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-              <li><a href="#profile_15" aria-controls="profile_15" role="tab" data-toggle="tab"><img src="images/placeholder.jpg"></img></a></li>
-            </ul> 
-
-        </div>
-      </div>
     </div>
-
-    <div id="profile-bg">
-      <div id="profile-bg-img">
-      </div> 
-    </div> 
-
-    <div id="profile">
-     <div class="tab-content">
-        <div role="tabpanel" class="tab-pane fade in active" id="profile_1">
-          <div class="hero-star" align="center">
-            <button class="center" ng-click="saved1 = !saved1">
-              <i class="fa" ng-class="{'fa-star': saved1, 'fa-star-o': !saved1}"></i>
-              <p>{{saved1 && 'Saved' || 'Save'}}</p>
-            </button>
-          </div>   
-          <div class="profile-header card">
-              <div class="profile-picture pull-left"><img src="images/placeholder.jpg"></img></div>
-              <div class="profile-overview pull-right">
+    
+    <div id="pymb-cards" class="center section row">
+        <div class="col-xs-6">
+          <div class="pymb-header card">
+              <div class="pymb-picture pull-left"><img src="images/placeholder.jpg"></img></div>
+              <div class="pymb-overview pull-right">
                   <div class="masthead">
                     <h3 class="text-capitalize"><strong>John Doe</strong></h3>
                     <h4>Title or personal headline goes here</h4>
@@ -98,240 +64,67 @@
                   </table>
               </div>
           </div>
-          <div class="profile-body card">
-            <h2>Background</h2>
-            <div class="background-content">
-              <div class="background-summary-container background-section">
-                <h3>Summary</h3>
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incclassunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupclassatat non proclassent, sunt in culpa qui officia deserunt mollit anim class est laborum.</div>  
-              </div>
-              <div class="background-experience-container background-section">
-                <h3>Experience</h3>
-                <div class="position position-latest">
-                  <header>
-                    <h5 class="experience-logo">
-                      <img src="images/facebook.png"></img>
-                    </h5>
-                    <h4>Senior Director, User Experience and Product Design</h4>
-                    <h5>Facebook</h5>
-                  </header>
-                  <div class="experience-date-locale">
-                    <time>February 2014</time>
-                    - Present
-                    <span class="locality">Menlo Park, CA</span>
-                  </div>
-                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incclassunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupclassatat non proclassent, sunt in culpa qui officia deserunt mollit anim class est laborum.</div>
-                </div>
-                <div class="position position-past">
-                  <header>
-                    <h5 class="experience-logo">
-                       <img src="images/google.png"></img>
-                    </h5>
-                    <h4>Principle UX Designer</h4>
-                    <h5>Google</h5>
-                  </header>
-                  <div class="experience-date-locale">
-                    <time>October 2012</time>
-                    - 
-                    <time>January 2014</time>
-                    <span class="locality">Mountain View, CA</span>
-                  </div>
-                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incclassunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupclassatat non proclassent, sunt in culpa qui officia deserunt mollit anim class est laborum.</div>                 
-                </div>
-              </div>            
-              <div class="background-education-container background-section">
-                <h3>Education</h3>
-                <div class="position position-latest">
-                  <header>
-                    <h5 class="experience-logo">
-                      <img src="images/um.png"></img>
-                    </h5>
-                    <h4>University of Michigan</h4>
-                    <h5>Master's, Human Computer Interaction</h5>
-                  </header>
-                  <div class="experience-date-locale">
-                    <time>February 2014</time>
-                    - Present
-                    <span class="locality">Ann Arbor, MI</span>
-                  </div>
-                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incclassunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupclassatat non proclassent, sunt in culpa qui officia deserunt mollit anim class est laborum.</div>
-                </div>
-              </div> 
-              <div class="background-languages-container background-section">
-                 <h3>Languages</h3>
-                 <div class="language">
-                  <h4>English</h4>
-                  <div class="description">Native or bilingual proficiency</div>
-                 </div>
-                 <div class="language">
-                  <h4>Mandarin</h4>
-                  <div class="description">Full professional proficiency</div>
-                 </div>
-              </div>                            
-              <div class="background-skills-container background-section">
-                 <h3>Skills</h3>
-                 <div class="skill">Design</div>
-                 <div class="skill">User Experience</div>
-                 <div class="skill">User Research</div>
-                 <div class="skill">Photoshop</div>
-                 <div class="skill">Illustrator</div>
-                 <div class="skill">Adobe Creative Cloud</div>
-                 <div class="skill">Wireframing</div>
-                 <div class="skill">HTML</div>
-                 <div class="skill">CSS</div>
-                 <div class="skill">User Centered Design</div>
-                 <div class="skill">Usability Testing</div>
-                 <div class="skill">Design Management</div>
-                 <div class="skill">Product Management</div>
-                 <div class="skill">Branding</div>
-              </div> 
-            </div>
-          </div>
-        </div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_2">
-         <div class="hero-star" align="center">
-            <button class="center" ng-click="saved2 = !saved2">
-              <i class="fa" ng-class="{'fa-star': saved2, 'fa-star-o': !saved2}"></i>
-              <p>{{saved2 && 'Saved' || 'Save'}}</p>
-            </button>
-          </div>   
-          <div class="profile-header card">
-              <div class="profile-picture pull-left"><img src="images/placeholder2.jpg"></img></div>
-              <div class="profile-overview pull-right">
-                  <div class="masthead">
-                    <h3 class="text-capitalize"><strong>April Knight</strong></h3>
-                    <h4>Title or personal headline goes here</h4>
-                    <div class="more-info">
-                      <div class="region">San Francisco Bay Area</div>
-                      <div>Computer Software</div>
-                    </div>
-                  </div>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Current</th>
-                        <td>Facebook</td>
-                      </tr>
-                      <tr>
-                        <th>Previous</th>
-                        <td>Google, Microsoft</td>
-                      </tr>
-                      <tr>
-                        <th>Education</th>
-                        <td>University of Michigan</td>
-                      </tr>                      
-                    </tbody>
-                  </table>
-              </div>
-          </div>
-          <div class="profile-body card">
-            <h2>Background</h2>
-            <div class="background-content">
-              <div class="background-summary-container background-section">
-                <h3>Summary</h3>
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incclassunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupclassatat non proclassent, sunt in culpa qui officia deserunt mollit anim class est laborum.</div>  
-              </div>
-              <div class="background-experience-container background-section">
-                <h3>Experience</h3>
-                <div class="position position-latest">
-                  <header>
-                    <h5 class="experience-logo">
-                      <img src="images/facebook.png"></img>
-                    </h5>
-                    <h4>Senior Director, User Experience and Product Design</h4>
-                    <h5>Facebook</h5>
-                  </header>
-                  <div class="experience-date-locale">
-                    <time>February 2014</time>
-                    - Present
-                    <span class="locality">Menlo Park, CA</span>
-                  </div>
-                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incclassunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupclassatat non proclassent, sunt in culpa qui officia deserunt mollit anim class est laborum.</div>
-                </div>
-                <div class="position position-past">
-                  <header>
-                    <h5 class="experience-logo">
-                       <img src="images/google.png"></img>
-                    </h5>
-                    <h4>Principle UX Designer</h4>
-                    <h5>Google</h5>
-                  </header>
-                  <div class="experience-date-locale">
-                    <time>October 2012</time>
-                    - 
-                    <time>January 2014</time>
-                    <span class="locality">Mountain View, CA</span>
-                  </div>
-                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incclassunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupclassatat non proclassent, sunt in culpa qui officia deserunt mollit anim class est laborum.</div>                 
-                </div>
-              </div>            
-              <div class="background-education-container background-section">
-                <h3>Education</h3>
-                <div class="position position-latest">
-                  <header>
-                    <h5 class="experience-logo">
-                      <img src="images/um.png"></img>
-                    </h5>
-                    <h4>University of Michigan</h4>
-                    <h5>Master's, Human Computer Interaction</h5>
-                  </header>
-                  <div class="experience-date-locale">
-                    <time>February 2014</time>
-                    - Present
-                    <span class="locality">Ann Arbor, MI</span>
-                  </div>
-                  <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incclassunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupclassatat non proclassent, sunt in culpa qui officia deserunt mollit anim class est laborum.</div>
-                </div>
-              </div> 
-              <div class="background-languages-container background-section">
-                 <h3>Languages</h3>
-                 <div class="language">
-                  <h4>English</h4>
-                  <div class="description">Native or bilingual proficiency</div>
-                 </div>
-                 <div class="language">
-                  <h4>Mandarin</h4>
-                  <div class="description">Full professional proficiency</div>
-                 </div>
-              </div>                            
-              <div class="background-skills-container background-section">
-                 <h3>Skills</h3>
-                 <div class="skill">Design</div>
-                 <div class="skill">User Experience</div>
-                 <div class="skill">User Research</div>
-                 <div class="skill">Photoshop</div>
-                 <div class="skill">Illustrator</div>
-                 <div class="skill">Adobe Creative Cloud</div>
-                 <div class="skill">Wireframing</div>
-                 <div class="skill">HTML</div>
-                 <div class="skill">CSS</div>
-                 <div class="skill">User Centered Design</div>
-                 <div class="skill">Usability Testing</div>
-                 <div class="skill">Design Management</div>
-                 <div class="skill">Product Management</div>
-                 <div class="skill">Branding</div>
-              </div> 
-            </div>
-          </div>          
-        </div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_3"></div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_4"></div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_5"></div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_6"></div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_7"></div>          
-        <div role="tabpanel" class="tab-pane fade" id="profile_8"></div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_9"></div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_10"></div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_11"></div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_12"></div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_13"></div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_14"></div>
-        <div role="tabpanel" class="tab-pane fade" id="profile_15"></div>                           
       </div>
-      <div id="save-hint">Inspired by this profile? Save it to get more insights!</div>
-    </div> 
+      <div class="col-xs-6">
+        <div class="pymb-header card">
+            <div class="pymb-picture pull-left"><img src="images/placeholder2.jpg"></img></div>
+            <div class="pymb-overview pull-right">
+                <div class="masthead">
+                  <h3 class="text-capitalize"><strong>April Knight</strong></h3>
+                  <h4>Title or personal headline goes here</h4>
+                  <div class="more-info">
+                    <div class="region">San Francisco Bay Area</div>
+                    <div>Computer Software</div>
+                  </div>
+                </div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>Current</th>
+                      <td>Facebook</td>
+                    </tr>
+                    <tr>
+                      <th>Previous</th>
+                      <td>Google, Microsoft</td>
+                    </tr>
+                    <tr>
+                      <th>Education</th>
+                      <td>University of Michigan</td>
+                    </tr>                      
+                  </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="more-info" class="section">
+      <div class="center row">
+        <h1>More about them</h1>
+        <div class="col-xs-4 info-piece">
+          <div id="common-skills">
+             <h5>Top skills they have</h5>
+             <div class="skill">Design</div>
+             <div class="skill">User Experience</div>
+             <div class="skill">User Research</div>
+             <div class="skill">Photoshop</div>
+             <div class="skill">Illustrator</div>
+             <div class="skill">Adobe Creative Cloud</div>
+             <div class="skill">Wireframing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="center row">
+        <div id="ama">
+        </div>
+        <div id="newsle">
+        </div>
+      </div>
+    </div>
 
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-
   </body>
 </html>
