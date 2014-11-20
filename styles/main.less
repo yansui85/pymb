@@ -48,11 +48,11 @@ body{
 	}
 	
 	.card {
-		border-bottom: 1px solid #999;
+		//border-bottom: 1px solid #ccc;
 		box-sizing: content-box;
 		margin-bottom: 10px;
 		vertical-align: baseline;
-		box-shadow: 0 1px 20px rgba(0,0,0,0.1);
+		box-shadow: 0 3px 12px rgba(0,0,0,0.2);
 	}	
 	//skill pills
 	.skill {
@@ -70,6 +70,24 @@ body{
 		border-bottom: 1px solid #ddd;
 		padding: 4px 10px;
 	}
+
+	table {
+		th {
+			color: @text-gray;
+			padding-right: 20px;
+			font-weight: normal;
+			.truncate;
+		}
+		td {
+			.truncate;
+		}
+	}
+	
+	.truncate {
+	  white-space: nowrap;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	}	
 }
 
 

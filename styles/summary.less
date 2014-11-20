@@ -56,7 +56,7 @@ body {
 				img {
 					width: 100%;
 					height: 100%;
-					border: 1px solid #eee;
+					//border: 1px solid #eee;
 				}
 			}
 			.pymb-overview {
@@ -81,13 +81,6 @@ body {
 						}
 					}					
 				}
-				table {
-					th {
-						color: @text-gray;
-						padding-right: 20px;
-						font-weight: normal;
-					}
-				}
 			}
 		}
 	}
@@ -99,10 +92,54 @@ body {
 			padding: 10px;
 		}
 		#common-skills {
+			margin-top: 45px;
 			.skill {
 				border: 1px solid #00A0DC;
 				background-color: transparent;
 				color: #00A0DC;
+			}
+		}
+		#common-roles {
+			table {
+				tr {
+					line-height: 32px;
+					&.chart-label {
+						color: @text-gray;
+						font-weight: normal;
+						line-height: 26px;
+					}
+					th {
+						text-align: right;
+						max-width: 200px;
+					}
+					td {
+						width: 100%;
+						padding: 3px 0;
+						> div {
+							height: 26px;
+							color: white;
+							padding: 0 5px;
+							line-height: 26px;
+						}
+						&#role1 {
+							> div {
+								background-color: #00A0DC;
+							}
+						}
+						&#role2 {
+							> div {
+								background-color: #8C6CAB;
+							}
+						}
+						&#role3 {
+							> div {
+								background-color: #E68523;
+							}
+						}						
+					}
+					
+				}
+
 			}
 		}
 	}
