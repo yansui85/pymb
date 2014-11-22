@@ -66,6 +66,37 @@
           </div>
       </div>
       <div class="col-xs-6">
+          <div class="pymb-header card">
+              <div class="pymb-picture pull-left"><img src="images/placeholder3.jpg"></img></div>
+              <div class="pymb-overview pull-right">
+                  <div class="masthead">
+                    <h3 class="text-capitalize"><strong>Lei Li</strong></h3>
+                    <h4>Title or personal headline goes here</h4>
+                    <div class="more-info">
+                      <div class="region">San Francisco Bay Area</div>
+                      <div>Computer Software</div>
+                    </div>
+                  </div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Current</th>
+                        <td>Facebook</td>
+                      </tr>
+                      <tr>
+                        <th>Previous</th>
+                        <td>Google, Microsoft</td>
+                      </tr>
+                      <tr>
+                        <th>Education</th>
+                        <td>University of Michigan</td>
+                      </tr>                      
+                    </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>      
+      <div class="col-xs-6">
         <div class="pymb-header card">
             <div class="pymb-picture pull-left"><img src="images/placeholder2.jpg"></img></div>
             <div class="pymb-overview pull-right">
@@ -98,19 +129,35 @@
       </div>
     </div>
 
+
     <div id="more-info" class="section">
       <div class="center row">
-        <h1>More about them</h1>
+        <h1>More about them</h1>       
         <div class="col-xs-4 info-piece">
-          <h5>Top skills they have</h5>
+          <h5>Top skills they have</h5>         
           <div id="common-skills">
-             <div class="skill">Design</div>
-             <div class="skill">User Experience</div>
-             <div class="skill">User Research</div>
-             <div class="skill">Photoshop</div>
-             <div class="skill">Illustrator</div>
-             <div class="skill">Adobe Creative Cloud</div>
-             <div class="skill">Wireframing</div>
+            <table>
+              <tbody>
+                <tr class="info-label">
+                  <th><a href="#">All</a><a href="#" class="inactive">In common with me</a></th>
+                </tr>
+              </tbody>
+            </table> 
+            <div class="info-block">            
+              <div class="skill">Design</div>
+              <div class="skill">User Experience</div>
+              <div class="skill">User Research</div>
+              <div class="skill">Photoshop</div>
+              <div class="skill">Illustrator</div>
+              <div class="skill">Adobe Creative Cloud</div>
+              <div class="skill">Wireframing</div>
+              <div class="skill">Illustrator</div>
+              <div class="skill">Adobe Creative Cloud</div>
+              <div class="skill">Wireframing</div>
+              <div class="skill">Illustrator</div>
+              <div class="skill">Adobe Creative Cloud</div>
+              <div class="skill">Wireframing</div>                            
+            </div>
           </div>
         </div>
         <div class="col-xs-4 info-piece">
@@ -118,7 +165,7 @@
           <div id="common-roles">
             <table>
               <tbody>
-                <tr class="chart-label">
+                <tr class="info-label">
                   <th></th>
                   <td>Avg. years in role</td>
                 </tr>
@@ -136,20 +183,129 @@
                 </tr>                      
               </tbody>
             </table>            
+          </div>       
+        </div>
+        <div class="col-xs-4 info-piece">
+          <h5>People and companies they follow</h5>          
+          <div id="common-follows">
+            <table>
+              <tbody>
+                <tr class="info-label">
+                  <th><a href="#">View more</a></th>
+                </tr>
+              </tbody>
+            </table>
+            <div class="info-block">                        
+              <div class="follow"><img src="images/follow.jpg"></img></div>
+              <div class="follow"><img src="images/follow.jpg"></img></div>
+              <div class="follow"><img src="images/follow.jpg"></img></div>
+              <div class="follow"><img src="images/follow.jpg"></img></div>
+              <div class="follow"><img src="images/follow.jpg"></img></div>
+              <div class="follow"><img src="images/follow.jpg"></img></div>
+              <div class="follow"><img src="images/um.png"></img></div>
+              <div class="follow"><img src="images/um.png"></img></div>
+              <div class="follow"><img src="images/google.png"></img></div>
+              <div class="follow"><img src="images/facebook.png"></img></div>
+            </div>
           </div>
-        </div>        
+        </div>                   
       </div>
     </div>
 
-    <div class="section">
+    <div id="widget-section" class="section">
       <div class="center row">
-        <div id="ama">
+        <div class="widget col-xs-6">
+          <div class="title"><h1>Ask them anything</h1></div>
+          <div id="ama" class="widget-body">
+            <div id="ama-ask">
+              <div class="ama-input">
+                <div class="recipient">
+                  <span class="to-label">To:</span>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/placeholder.jpg"></img><span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><img src="images/placeholder3.jpg">Lei Li</li>
+                    <li><img src="images/placeholder2.jpg">April Knight</li>
+                  </ul>
+                </div>
+               <input placeholder="Send a question..."></input>
+             </div>
+              <div class="ama-actions">
+                <button class="btn btn-primary pull-right" id="ama-post">Send</button>
+                <div id="anonymous" class="pull-right">
+                  <span>Share who you are?</span><i class="fa fa-fw fa-lg fa-toggle-off"></i>                   
+                </div>
+              </div>
+            </div>
+            <div id="ama-latest">
+              <h5>Or, vote up the questions you are interested in <span class="pull-right"><a>View more</a></span></h5>
+              <div class="ama-question">
+                <button class="btn btn-primary pull-left vote-button truncate" ng-init="vca=123" ng-click="vca=vca+1"><i class="fa fa-arrow-up"></i>{{vca}}</button>
+                <div class="reading">What do you hate the most about your job?</div>
+              </div>
+              <div class="ama-question">
+                <button class="btn btn-primary pull-left vote-button truncate" ng-init="vcb=15" ng-click="vcb=vcb+1"><i class="fa fa-arrow-up"></i>{{vcb}}</button>
+                <div class="reading">Which career decisions were you most afraid of at the time?</div>
+                <div class="reading">
+                  <div class="speaker pull-left">
+                    <img class="pull-right" src="images/placeholder.jpg"></img>
+                    <div class="timestamp pull-right">1d</div>
+                  </div>
+                  <span class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incclassunt ut labore et dolore magna.</span>
+                </div>
+              </div>
+              <div class="ama-question">
+                <button class="btn btn-primary pull-left vote-button truncate" ng-init="vcc=8" ng-click="vcc=vcc+1"><i class="fa fa-arrow-up"></i>{{vcc}}</button>
+                <div class="reading">What are the first 3 things you ususally do after getting into office in the morning?</div>
+                <div class="reading">
+                  <div class="speaker pull-left">
+                    <img class="pull-right" src="images/placeholder.jpg"></img>
+                    <div class="timestamp pull-right">2d</div>
+                  </div>
+                  <span class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incclassunt.</span>
+                </div>
+              </div>              
+            </div>
+          </div>
         </div>
-        <div id="newsle">
+        <div class="widget col-xs-6">
+          <div class="title"><h1>See them in the news</h1></div>
+          <div id="news" class="widget-body">
+            <div id="news-latest">
+              <div class="news-news">
+                <div class="news-img pull-left"><img src="images/news1.jpeg"></img></div>
+                <div class="news-title">Teespring: Making Millionaires Of T-Shirts Sellers</div>
+              </div>
+              <div class="news-news">
+                <div class="news-img pull-left"><img src="images/news2.jpeg"></img></div>
+                <div class="news-title">Teespring Raises $35 Million Series B From Khosla Ventures As It Prepares To Expand Beyond Apparel</div>
+              </div>
+              <div class="news-news">
+                <div class="news-img pull-left"><img src="images/news3.jpeg"></img></div>
+                <div class="news-title">Five Ways the SAP Cloud Strategy Opens the Door to Business</div>
+              </div>
+              <div class="news-news">
+                <div class="news-img pull-left"><img src="images/news2.jpeg"></img></div>
+                <div class="news-title">Digital Transformation, Part 7: The Outlook</div>
+              </div>
+              <div class="news-news">
+                <div class="news-img pull-left"><img src="images/news1.jpeg"></img></div>
+                <div class="news-title">Digital Transformation, Part 7: The Outlook</div>
+              </div>
+              <div class="news-news">
+                <div class="news-img pull-left"><img src="images/news3.jpeg"></img></div>
+                <div class="news-title">Simplify Your Formula for Success at the UK & Ireland SAP User Conference 2014</div>
+              </div>                                                        
+            </div>            
+          </div>
         </div>
       </div>
     </div>
 
+    <div class="center">
+      <div class="footer-hint"><i class="fa fa-lg fa-ellipsis-h"></i><a href="index.html">Find more <strong>People You Might Become</strong></a></div>
+    </div>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   </body>
 </html>
