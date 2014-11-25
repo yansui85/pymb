@@ -56,7 +56,7 @@ body {
 				img {
 					width: 100%;
 					height: 100%;
-					//border: 1px solid #eee;
+					//border: @divider-line;
 				}
 			}
 			.pymb-overview {
@@ -76,13 +76,15 @@ body {
 						font-size: 14px !important;
 					}					
 					.more-info {
+						line-height: 14px;
+						margin-top: 6px;
 						div {
 							display: inline-block;
 							&.region {
 								padding-left: 0;
 								padding-right: 15px;
 								margin-right: 10px;
-								border-right: 1px solid #333;
+								border-right: 1px solid @text-gray;
 							}	
 						}
 					}					
@@ -131,6 +133,9 @@ body {
 					}
 					th, td {
 						padding: 3px;
+					}
+					th {
+						color: #333;
 					}					
 				}
 			}
@@ -218,6 +223,7 @@ body {
 		#ama-ask {
 			width: 100%;
 			background-color: #f8f8f8;
+			border-top: @divider-line;
 			padding: 20px;
 			.ama-input {
 				.recipient {
@@ -306,7 +312,7 @@ body {
 			.ama-question {
 				line-height: 20px;
 				padding: 10px 0;
-				border-bottom: 1px solid #eee;
+				border-bottom: @divider-line;
 				&:last-child {
 					border: none;
 				}
@@ -344,7 +350,7 @@ body {
 			padding: 20px;
 			.news-news {
 				height: 64px;
-				border-bottom: 1px solid #eee;
+				border-bottom: @divider-line;
 				&:last-child {
 					border-bottom: none;
 				}
