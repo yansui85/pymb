@@ -213,7 +213,7 @@ body {
 				background-color: white;
 				box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 				//border: 1px solid #e5e5e5;				
-				height: 480px;
+				height: @widget-height;
 				//max-height: 2000px;	
 				overflow: hidden;		
 			}
@@ -224,14 +224,15 @@ body {
 			width: 100%;
 			background-color: #f8f8f8;
 			border-top: @divider-line;
-			padding: 20px;
+			padding: 20px 20px 10px 20px;
+			height: 116px;
 			.ama-input {
 				.recipient {
 					position: absolute;
-					margin: 2px;
+					margin: 1px;
 					padding: 5px;
 					background-color: #f3f3f3;
-					border-radius: 5px;
+					border-radius: 4px;
 					.to-label {
 						color: @text-gray;
 						font-size: 0.9em;
@@ -244,13 +245,16 @@ body {
 						}
 					}					
 					button {
-						width: 28px;
-						height: 28px;
+						width: 29px;
+						height: 29px;
 						padding: 0px;
 						img {
 							width: 100%;
 							height: 100%;
 							display: inline-block;
+						}
+						.caret {
+							display: none;
 						}
 					}
 					ul {
@@ -273,9 +277,10 @@ body {
 				}				
 				input {
 					width: 100%;
-					border: 1px solid #d5d5d5;
+					border: @divider-line;
 					border-radius: 5px;
 					padding: 10px 10px 10px 70px;
+					height: 40px;
 					&:focus {
 						border: 1px solid @brand-primary;
 						outline: none;
@@ -304,6 +309,7 @@ body {
 		}
 		#ama-latest {
 			padding: 20px;
+			height: @widget-height - 116px;
 			h5 {
 				color: @text-gray;
 				margin-top: 0;
@@ -311,7 +317,7 @@ body {
 			}
 			.ama-question {
 				line-height: 20px;
-				padding: 10px 0;
+				padding: 12px 0;
 				border-bottom: @divider-line;
 				&:last-child {
 					border: none;
@@ -336,8 +342,11 @@ body {
 							margin-left: 5px;
 						}						
 					}
+				}
+				.ama-answer {
+					margin-top: 5px;
 					.answer {
-						margin-top: 5px;
+						//margin-top: 8px;
 						font-weight: bold;
 					}
 				}
