@@ -215,31 +215,10 @@
     <div id="widget-section" class="section">
       <div class="center row">
         <div class="widget col-xs-6">
-          <div class="title"><h1>Ask them anything</h1></div>
+          <div class="title"><h1>Top questions we want them to answer</h1></div>
           <div id="ama" class="widget-body">
-            <div id="ama-ask">
-              <div class="ama-input">
-                <div class="recipient">
-                  <span class="to-label">To:</span>
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/placeholder.jpg"></img><span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><img src="images/placeholder3.jpg">Lei Li</li>
-                    <li><img src="images/placeholder2.jpg">April Knight</li>
-                  </ul>
-                </div>
-               <input placeholder="Send a question..."></input>
-             </div>
-              <div class="ama-actions">
-                <button class="btn btn-primary pull-right" id="ama-post">Send</button>
-                <div id="anonymous" class="pull-right">
-                  <span>Share who you are?</span><i class="fa fa-fw fa-lg fa-toggle-off"></i>                   
-                </div>
-              </div>
-            </div>
             <div id="ama-latest">
-              <h5>Or, vote up the questions you are interested in <span class="pull-right"><a>View more</a></span></h5>
+              <h5>Vote up the questions you are interested in <span class="pull-right"><a>View more</a></span></h5>
               <div class="ama-question">
                 <button class="btn btn-primary pull-left vote-button truncate" ng-init="vca=123" ng-click="vca=vca+1"><i class="fa fa-arrow-up"></i>{{vca}}</button>
                 <div class="reading">What do you hate the most about your job?</div>
@@ -267,36 +246,63 @@
                 </div>
               </div>              
             </div>
+            <div id="ama-ask">
+              <div class="ama-input">
+                <div class="recipient">
+                  <span class="to-label">To:</span>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/placeholder.jpg"></img><span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><img src="images/placeholder3.jpg">Lei Li</li>
+                    <li><img src="images/placeholder2.jpg">April Knight</li>
+                  </ul>
+                </div>
+               <input placeholder="Or, send your own question..."></input>
+             </div>
+              <div class="ama-actions">
+                <button class="btn btn-primary pull-right" id="ama-post">Send</button>
+                <div id="anonymous" class="pull-right">
+                  <span>Share who you are?</span><i class="fa fa-fw fa-lg fa-toggle-off"></i>                   
+                </div>
+              </div>
+            </div>          
           </div>
         </div>
         <div class="widget col-xs-6">
-          <div class="title"><h1>See them in the news</h1></div>
+          <div class="title"><h1>Latest news about them</h1></div>
           <div id="news" class="widget-body">
             <div id="news-latest">
               <div class="news-news">
-                <div class="news-img pull-left"><img src="images/news1.jpeg"></img></div>
-                <div class="news-title">Teespring: Making Millionaires Of T-Shirts Sellers</div>
+                <div class="news-img pull-left"><img src="images/placeholder.jpg"></img></div>
+                <div class="news-title reading">Teespring: Making Millionaires Of T-Shirts Sellers</div>
+                <div class="news-source timestamp">Techcrunch 11/10/14</div>
               </div>
               <div class="news-news">
-                <div class="news-img pull-left"><img src="images/news2.jpeg"></img></div>
-                <div class="news-title">Teespring Raises $35 Million Series B From Khosla Ventures As It Prepares To Expand Beyond Apparel</div>
+                <div class="news-img pull-left"><img src="images/placeholder.jpg"></img></div>
+                <div class="news-title reading">Teespring Raises $35 Million Series B From Khosla Ventures As It Prepares To Expand Beyond Apparel</div>
+                <div class="news-source timestamp">WSJ 11/8/14</div>              
               </div>
               <div class="news-news">
-                <div class="news-img pull-left"><img src="images/news3.jpeg"></img></div>
-                <div class="news-title">Five Ways the SAP Cloud Strategy Opens the Door to Business</div>
+                <div class="news-img pull-left"><img src="images/placeholder2.jpg"></img></div>
+                <div class="news-title reading">Five Ways the SAP Cloud Strategy Opens the Door</div>
+                <div class="news-source timestamp">Techcrunch 10/1/14</div>              
               </div>
               <div class="news-news">
-                <div class="news-img pull-left"><img src="images/news2.jpeg"></img></div>
-                <div class="news-title">Digital Transformation, Part 7: The Outlook</div>
+                <div class="news-img pull-left"><img src="images/placeholder3.jpg"></img></div>
+                <div class="news-title reading">Digital Transformation, Part 7: The Outlook</div>
+                <div class="news-source timestamp">Techcrunch 10/1/14</div>              
               </div>
               <div class="news-news">
-                <div class="news-img pull-left"><img src="images/news1.jpeg"></img></div>
-                <div class="news-title">Digital Transformation, Part 7: The Outlook</div>
+                <div class="news-img pull-left"><img src="images/placeholder3.jpg"></img></div>
+                <div class="news-title reading">Digital Transformation, Part 7: The Outlook</div>
+                <div class="news-source timestamp">Techcrunch 10/1/14</div>              
               </div>
               <div class="news-news">
-                <div class="news-img pull-left"><img src="images/news3.jpeg"></img></div>
-                <div class="news-title">Simplify Your Formula for Success at the UK & Ireland SAP User Conference 2014</div>
-              </div>                                                        
+                <div class="news-img pull-left"><img src="images/placeholder.jpg"></img></div>
+                <div class="news-title reading">Simplify Your Formula for Success at the UK & Ireland SAP User Conference 2014</div>
+                <div class="news-source timestamp">Techcrunch 10/1/14</div>              
+              </div>                                                         
             </div>            
           </div>
         </div>
