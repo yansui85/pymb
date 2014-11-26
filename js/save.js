@@ -26,6 +26,7 @@ var toggleSave = function(button) {
 		//$(document).find('#save-count').text(count + ' ' + 'saved');		
 	// }
 };
+
 $(document).ready( function() {
 	$('ul#tabs').find('.fa-star').hide();
 	$('#save-count').text(count + ' ' + 'saved');
