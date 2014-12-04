@@ -1,15 +1,21 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
 @import "../bower_components/bootstrap/less/theme.less";
 
-@top-height: 142px;
-@global-width: 974px;
-@profile-bg-height: 320px;
-@profile-header-height: 240px;
-@text-gray: #aaa;
-@grid-gutter-width: 10px;
-@brand-primary: #00A0DC;
-@divider-line: 1px solid #e5e5e5;
-@widget-height: 480px; 
+@navbar-height:                             42px;
+@navbar-default-bg: 						#3f3f3f;
+@navbar-default-link-color:                 darken(#cccfd3, 5%);
+@navbar-default-link-hover-color:           white;
+@navbar-default-link-active-color:          white;
+@top-height: 								142px;
+@global-width: 								974px;
+@profile-bg-height: 						320px;
+@profile-header-height: 					240px;
+@text-gray: 								#aaa;
+@grid-gutter-width: 						10px;
+@brand-primary: 							#00A0DC;
+@divider-line: 								1px solid #e5e5e5;
+@widget-height: 							480px; 
+@menubar-bg: 								#1a1a1a;
 
 @font-face {
 	font-family: 'LinkedIn-Glyphs-2.0.2';
@@ -87,7 +93,12 @@ body{
 		padding: 4px 10px;
 	}
 
-	table {
+	table, tbody {
+		display: block;
+		.truncate;
+		tr {
+			.truncate;
+		}
 		th {
 			color: @text-gray;
 			padding-right: 20px;
@@ -129,6 +140,7 @@ body{
 }
 
 
+@import "chrome.less";
 @import "discover.less";
 @import "summary.less";
 

@@ -1,0 +1,106 @@
+.navbar {
+	border: none;
+	text-shadow: none;
+	background-image: -webkit-linear-gradient(top, #696969 0%,#3f3f3f 100%);
+	background-image: -moz-linear-gradient(top, #696969 0%,#3f3f3f 100%);
+	background-image: -o-linear-gradient(top, #696969 0%,#3f3f3f 100%);
+	background-image: linear-gradient(top, #696969 0%,#3f3f3f 100%);
+	
+	>.container {
+		text-align: center;
+		height: @navbar-height;
+	}
+
+	//header bar	
+	&.navbar-fixed-top {
+		margin: 0px;
+		box-shadow: rgb(51, 51, 51) 0px 0px 10px 0px;
+		//branding area
+		.navbar-header {
+			.navbar-brand {
+				text-align: left;
+				padding: 0;
+				margin: 0;
+				.logo {
+					height: 100%;
+					width: auto;
+				}
+				.app-brand {
+				    border: 0;
+					outline: none;
+					padding-left: 0 2px;
+					line-height: @navbar-height;
+					vertical-align: bottom;
+					text-shadow: none;
+					color: @navbar-default-link-hover-color;
+					font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				}		
+			}
+			// &:hover {
+			// 	background-color: @menubar-bg;
+			// }
+		}
+
+		//profile image
+		.pull-right {
+			display: inline-block;
+			verticle-align: middle;
+			> .nav-action {
+				height: @navbar-height;
+				&:hover {
+					background-color: @menubar-bg;
+					cursor: pointer;
+				}
+				.profile-photo {
+					margin: 9px 8px;
+					width: 24px;
+					height: 24px;
+				}	
+			}		
+		}
+	}
+}
+
+/***************************************
+following is to disable responsiveness
+***************************************/
+
+.container {
+	width: @global-width + 20 !important; 
+	max-width: none !important;	
+}
+
+/* Always float the navbar header */
+.navbar-header {
+  float: left;
+}
+
+/* Undo the collapsing navbar */
+.navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+}
+
+.navbar-toggle {
+  display: none;
+}
+.navbar-collapse {
+  border-top: 0;
+}
+
+/* Always apply the floated nav */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+.navbar-nav > li {
+  float: left;
+}
+
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+  float: right;
+}
+

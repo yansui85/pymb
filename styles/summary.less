@@ -15,7 +15,7 @@ body {
 		background-size: cover;		
 		background-position: 50% 0px;
 		min-width: @global-width;
-		position: fixed;
+		//position: fixed;
 		z-index: 100;
 		h1 {
 			margin-top: 5px;
@@ -33,7 +33,8 @@ body {
 			margin-right: 3px;
 		}
 		.pull-right {
-			margin-top: 7px;
+			font-size: 18px;
+			margin-top: 5px;
 		}
 	}
 	
@@ -41,7 +42,7 @@ body {
 		@pymb-height: @profile-header-height - 65px;
 		@pymb-width: @global-width / 2 - 10px;
 		@pic-size: 120px;
-		padding-top: 100px;
+		//padding-top: 100px;
 		.pymb-header {
 			background-color: white;
 			height: @pymb-height; 
@@ -64,6 +65,7 @@ body {
 				padding: 15px;
 				height: @pymb-height;
 				width: @pymb-width - @pic-size - 15px; 
+				line-height: 1.5em;
 				.masthead {
 					margin-bottom: 15px;
 					h3, h4 {
@@ -74,20 +76,34 @@ body {
 					}
 					h4 {
 						font-size: 14px !important;
+						line-height: 18px;
 					}					
 					.more-info {
-						line-height: 14px;
-						margin-top: 6px;
+						line-height: 16px;
 						div {
 							display: inline-block;
+							max-width:  (@pymb-width - @pic-size - 15px - 30px) / 2 - 10px;
 							&.region {
 								padding-left: 0;
-								padding-right: 15px;
-								margin-right: 10px;
+								padding-right: 10px;
+								margin-right: 7px;
 								border-right: 1px solid @text-gray;
 							}	
 						}
 					}					
+				}
+				table, tbody, tr {
+					width: @pymb-width - @pic-size - 15px - 30px;					
+					max-width: @pymb-width - @pic-size - 15px - 30px !important;  
+					//table-layout: fixed;
+					th {
+						width: 80px;
+						max-width: 80px;
+					}
+					td {
+						width: @pymb-width - @pic-size - 15px - 30px - 80px - 20px; //20px padding between th and td
+						max-width: @pymb-width - @pic-size - 15px - 30px - 80px - 20px;
+					}
 				}
 			}
 		}
@@ -153,7 +169,8 @@ body {
 				margin-right: 3px;
 				margin-bottom: 6px;
 				height: 22px;	
-				font-size: 0.9em;			
+				font-size: 0.9em;	
+				padding: 3px 9px;		
 			}
 		}
 		#common-roles {
@@ -162,7 +179,7 @@ body {
 				tr {
 					th {
 						text-align: right;
-						max-width: 200px;
+						max-width: 180px;
 					}
 					td {
 						width: 80%;
@@ -314,7 +331,7 @@ body {
 			h5 {
 				color: @text-gray;
 				margin-top: 0;
-				margin-bottom: 15px;
+				margin-bottom: 20px;
 			}
 			.ama-question {
 				line-height: 20px;

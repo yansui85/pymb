@@ -28,6 +28,7 @@ var toggleSave = function(button) {
 };
 
 $(document).ready( function() {
+    $("#chrome-bar").load("chrome.html"); 
 	$('ul#tabs').find('.fa-star').hide();
 	$('#save-count').text(count + ' ' + 'saved');
 	// if(count == 0) {

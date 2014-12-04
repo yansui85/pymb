@@ -1,11 +1,12 @@
 body {
+	margin-top: @navbar-height;
 	#fixed-top {
 		position: fixed;
 		width: 100%;
 		height: @top-height;
 		background-color: #eee;
-		box-shadow: 0 1px 50px rgba(10,10,10,0.8);
-		border-bottom: 1px solid #333;
+		box-shadow: 0 1px 50px rgba(0,0,0,0.5);
+		border-bottom: 1px solid #606060;
 		z-index: 100;
 		.center {
 			height: @top-height;
@@ -16,7 +17,8 @@ body {
 				//position: fixed;
 				background-color: #eee;
 				.toggle {
-					margin-top: 35px;
+					font-size: 18px;					
+					margin-top: 30px;
 					.fa-star {
 						text-shadow: 0px 0px 1px black;
 					}
@@ -26,11 +28,15 @@ body {
 			.pymb-list {
 				.nav {
 					border: none;
+					text-align: center;
 					li {
 						margin: 0;
 						z-index: 1;
 						padding-top: 7px;
 						background-color: #eee;	
+						float: none;
+						display: inline-block;
+						font-size: 0; //remove gap between inline blocks
 						a{
 							padding: 0;
 							margin: 0;
@@ -38,8 +44,8 @@ body {
 							img {
 								width: (@global-width - 78) / 14;
 								height: (@global-width - 78) / 14;
-								-webkit-transition: width 0.1s, height 0.1s, -webkit-transform 0.1s;
-    							transition: width 0.1s, height 0.1s, transform 0.1s;
+								-webkit-transition: width 0.1s, -webkit-transform 0.1s;
+    							transition: width 0.1s, transform 0.1s;
 								opacity: 0.9;
 								-webkit-filter: grayscale(1);
 								filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
@@ -58,6 +64,7 @@ body {
 								bottom: 1px;
 								right: 3px;
 								text-shadow: 0px 0px 1px black;								
+								font-size: 18px;						
 							}
 						}
 						&.active {
@@ -66,7 +73,7 @@ body {
 							a img {
 								width: 78px;
 								height: 78px;
-								box-shadow: 0 1px 20px 5px rgba(0,0,0,0.5);
+								box-shadow: 0 5px 20px 3px rgba(0,0,0,0.5);
 								opacity: 1;
 								-webkit-filter: none;
 								filter: none;								
@@ -111,7 +118,7 @@ body {
 				.hero-star {
 					position: fixed;
 					width: @global-width;
-					top: @top-height + 30px;
+					top: @top-height + 30px + @navbar-height;
 					button.center {
 						background-color: rgba(0,0,0,0.65);
 						height: 60px;
